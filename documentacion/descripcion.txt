@@ -1,0 +1,26 @@
+Nombre del proyecto:
+PractiLink
+
+Problema:
+Los alumnos de la UTD batallan para encontrar una empresa donde realizar sus
+practicas y estadias. Buscan por su cuenta, en grupos de Facebook o por
+recomendacion, y muchas veces no saben que empresas aceptan practicantes ni
+que perfil piden. Se pierde mucho tiempo y a veces terminan en lugares que no
+tienen relacion con su carrera.
+
+Objetivo:
+Reducir el tiempo que tarda un alumno en encontrar empresa y centralizar en un
+solo lugar las vacantes de practicas profesionales.
+
+Descripcion:
+PractiLink es una plataforma web que conecta a estudiantes de la UTD con
+empresas de Durango que buscan practicantes. Las empresas publican sus
+vacantes y los alumnos crean un perfil con su carrera, habilidades y CV. El
+sistema recomienda las vacantes que mejor se ajustan a cada perfil, muestra
+resenas de exalumnos sobre cada empresa y permite al area de vinculacion de la
+universidad dar seguimiento en tiempo real.
+
+Usuarios:
+- Estudiantes de la UTD proximos a realizar practicas o estadias.
+- Empresas de Durango que buscan practicantes.
+- Area de vinculacion de la universidad.

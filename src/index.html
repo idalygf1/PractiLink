@@ -4,66 +4,305 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PractiLink</title>
+    <style>
+        :root {
+            --azul: #1e3a8a;
+            --azul-claro: #3b82f6;
+            --turquesa: #0ea5a4;
+            --amarillo: #facc15;
+            --fondo: #f1f5f9;
+            --texto: #1f2937;
+            --blanco: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: var(--fondo);
+            color: var(--texto);
+            line-height: 1.6;
+        }
+
+        /* Barra de navegacion */
+        nav {
+            background: var(--azul);
+            padding: 16px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .logo {
+            color: var(--blanco);
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: var(--amarillo);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            color: var(--blanco);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--amarillo);
+        }
+
+        /* Encabezado principal */
+        header {
+            background: linear-gradient(135deg, var(--azul), var(--turquesa));
+            color: var(--blanco);
+            text-align: center;
+            padding: 70px 8% 60px;
+        }
+
+        header h1 {
+            font-size: 2.6rem;
+            margin-bottom: 12px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .boton {
+            display: inline-block;
+            background: var(--amarillo);
+            color: var(--azul);
+            padding: 14px 36px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .boton:hover {
+            transform: scale(1.05);
+        }
+
+        /* Secciones */
+        section {
+            padding: 60px 8%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            color: var(--azul);
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .texto-centro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .banner {
+            width: 100%;
+            border-radius: 16px;
+            margin-top: 30px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Tarjetas de beneficios */
+        .beneficios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .tarjeta {
+            background: var(--blanco);
+            border-radius: 14px;
+            padding: 28px 22px;
+            text-align: center;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+            border-top: 5px solid var(--turquesa);
+        }
+
+        .tarjeta .icono {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+        }
+
+        .tarjeta h3 {
+            color: var(--azul);
+            margin-bottom: 8px;
+        }
+
+        /* Llamado a la accion */
+        .invitacion {
+            background: var(--azul);
+            color: var(--blanco);
+            text-align: center;
+            border-radius: 16px;
+            padding: 50px 8%;
+        }
+
+        .invitacion h2 {
+            color: var(--amarillo);
+        }
+
+        .invitacion p {
+            margin-bottom: 26px;
+            font-size: 1.1rem;
+        }
+
+        /* Contacto */
+        .contacto {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .dato {
+            background: var(--blanco);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .dato strong {
+            display: block;
+            color: var(--turquesa);
+            margin-bottom: 4px;
+        }
+
+        footer {
+            background: var(--azul);
+            color: var(--blanco);
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
+    <nav>
+        <div class="logo">Practi<span>Link</span></div>
+        <ul>
+            <li><a href="#que-es">Inicio</a></li>
+            <li><a href="#beneficios">Beneficios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
     <header>
-        <h1>PractiLink</h1>
-        <h2>Tu camino a las practicas profesionales empieza aqui</h2>
+        <h1>Tu camino a las practicas profesionales empieza aqui</h1>
+        <p>
+            Conectamos a estudiantes de la UTD con empresas de Durango que buscan
+            practicantes. Encuentra la vacante ideal para tu carrera en un solo lugar.
+        </p>
+        <a href="#" class="boton">Comienza ahora</a>
     </header>
 
     <main>
-        <img src="img/banner.svg" alt="Banner de PractiLink: estudiantes conectados con empresas" width="100%">
-
-        <section>
-            <h3>¿Que es PractiLink?</h3>
-            <p>
-                PractiLink es una plataforma web que conecta a estudiantes de la UTD
-                con empresas de Durango que buscan practicantes. Las empresas publican
-                sus vacantes y tu creas un perfil con tu carrera, tus habilidades y tu CV.
-                El sistema te recomienda las vacantes que mejor van contigo, para que
-                dejes de buscar a ciegas.
+        <section id="que-es">
+            <h2>¿Que es PractiLink?</h2>
+            <p class="texto-centro">
+                PractiLink es una plataforma web donde las empresas publican sus vacantes
+                y tu creas un perfil con tu carrera, tus habilidades y tu CV. El sistema
+                te recomienda las vacantes que mejor van contigo, para que dejes de
+                buscar a ciegas.
             </p>
+            <img class="banner" src="img/banner.svg" alt="Banner de PractiLink: estudiantes conectados con empresas">
         </section>
 
-        <section>
-            <h3>¿Por que usar PractiLink?</h3>
-            <p>
+        <section id="beneficios">
+            <h2>¿Por que usar PractiLink?</h2>
+            <p class="texto-centro">
                 Hoy encontrar empresa para las practicas es pura busqueda a ciegas:
                 preguntar a conocidos, revisar grupos de Facebook o ir de empresa en
-                empresa sin saber si aceptan alumnos o que perfil buscan. Se pierde
-                mucho tiempo y a veces terminamos en lugares que no tienen nada que ver
-                con nuestra carrera. PractiLink reune todas las vacantes en un solo lugar.
+                empresa sin saber si aceptan alumnos o que perfil buscan. PractiLink
+                reune todas las vacantes en un solo lugar.
             </p>
 
-            <h3>Beneficios</h3>
-            <ul>
-                <li>
-                    <strong>Vacantes recomendadas para ti:</strong>
-                    el sistema hace match entre tus habilidades y lo que pide cada empresa.
-                </li>
-                <li>
-                    <strong>Resenas de exalumnos:</strong>
-                    conoce la experiencia de quienes ya hicieron sus practicas en esa
-                    empresa antes de aplicar.
-                </li>
-                <li>
-                    <strong>Todo en un solo lugar:</strong>
-                    ahorra tiempo, ya no tienes que buscar en grupos ni ir de empresa en empresa.
-                </li>
-                <li>
-                    <strong>Seguimiento de vinculacion:</strong>
-                    el area de vinculacion de la universidad puede dar seguimiento a tu
-                    proceso en tiempo real.
-                </li>
-            </ul>
+            <div class="beneficios">
+                <div class="tarjeta">
+                    <div class="icono">🎯</div>
+                    <h3>Vacantes para ti</h3>
+                    <p>El sistema hace match entre tus habilidades y lo que pide cada empresa.</p>
+                </div>
+                <div class="tarjeta">
+                    <div class="icono">⭐</div>
+                    <h3>Resenas de exalumnos</h3>
+                    <p>Conoce la experiencia de quienes ya hicieron sus practicas ahi antes de aplicar.</p>
+                </div>
+                <div class="tarjeta">
+                    <div class="icono">⏱️</div>
+                    <h3>Ahorra tiempo</h3>
+                    <p>Todo en un solo lugar: ya no tienes que buscar en grupos ni ir de empresa en empresa.</p>
+                </div>
+                <div class="tarjeta">
+                    <div class="icono">📊</div>
+                    <h3>Seguimiento</h3>
+                    <p>El area de vinculacion de la universidad da seguimiento a tu proceso en tiempo real.</p>
+                </div>
+            </div>
         </section>
 
         <section>
-            <p>
-                <strong>¡Deja de buscar empresa por tu cuenta!</strong>
-                Crea tu perfil en PractiLink y encuentra el lugar ideal para tus practicas.
-            </p>
+            <div class="invitacion">
+                <h2>¡Deja de buscar empresa por tu cuenta!</h2>
+                <p>Crea tu perfil en PractiLink y encuentra el lugar ideal para tus practicas.</p>
+                <a href="#" class="boton">Conoce mas</a>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p class="texto-centro">¿Eres empresa o estudiante y tienes dudas? Escribenos.</p>
+            <div class="contacto">
+                <div class="dato">
+                    <strong>📧 Correo</strong>
+                    contacto@practilink.com
+                </div>
+                <div class="dato">
+                    <strong>📞 Telefono</strong>
+                    618 123 4567
+                </div>
+                <div class="dato">
+                    <strong>📍 Ubicacion</strong>
+                    Durango, Dgo., Mexico
+                </div>
+                <div class="dato">
+                    <strong>🕒 Horario</strong>
+                    Lunes a viernes, 9:00 a 18:00
+                </div>
+            </div>
         </section>
     </main>
+
+    <footer>
+        &copy; 2026 PractiLink. Todos los derechos reservados.
+    </footer>
 </body>
 </html>
